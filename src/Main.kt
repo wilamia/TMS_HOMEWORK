@@ -7,6 +7,7 @@ fun isPalindrome() {
     when {
         number == number.reversed() ->
             println("Number is palindrome")
+
         else ->
             println("Number isn't palindrome")
     }
@@ -21,14 +22,14 @@ fun isSimple() {
     var isTrue = true
 
     for (count in 2 until number) {
-        if (number%count==0 || number<=0)
+        if (number % count == 0 || number <= 0)
             isTrue = false
     }
 
-    when(isTrue) {
-        false -> println("Number isn't simple")
-        else -> println("Number is simple")
-    }
+    println(when (isTrue) {
+        false -> "Number isn't simple"
+        else -> "Number is simple"
+    })
 
     return main()
 }
@@ -44,11 +45,12 @@ fun sumOfDigits() {
 }
 
 fun sumOfDigitsRecurse(num: Int): Int {
-    when(num) {
+    when (num) {
         in 1..10 ->
             return num
+
         else -> {
-            return sumOfDigitsRecurse((num%10) + sumOfDigitsRecurse(num/10))
+            return sumOfDigitsRecurse((num % 10) + sumOfDigitsRecurse(num / 10))
         }
     }
 }
@@ -59,7 +61,7 @@ fun reverseStairs() {
     var number = readln().toInt()
 
     while (number > 0) {
-        for (count in 1 ..number) {
+        for (count in 1..number) {
             print('#')
         }
         println()
@@ -72,7 +74,7 @@ fun reverseStairs() {
 fun main() {
     println("\nEnter number of task: ")
     val task = readln().toInt()
-    when(task) {
+    when (task) {
         1 -> isPalindrome()
         2 -> isSimple()
         3 -> sumOfDigits()

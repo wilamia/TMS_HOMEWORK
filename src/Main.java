@@ -9,7 +9,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         int number = scanner.nextInt();
-        String numbersStr = "" + number;
+        String numbersStr = String.valueOf(number);
 
         // variant 1
         String reverseNumber = new StringBuilder(numbersStr).reverse().toString();
@@ -19,7 +19,7 @@ public class Main {
         boolean isTrue = true;
         char[] symbols = numbersStr.toCharArray();
 
-        for (int i=0; i< symbols.length; i++){
+        for (int i = 0; i< symbols.length; i++){
             if (symbols[symbols.length - (i+1)] == symbols[i]){
                 isTrue = true;
             } else {
@@ -45,7 +45,7 @@ public class Main {
         for (int i = 2; i < number; i++) {
             /* начинаем с 2, так как все числа делятся на 1
             и строго < так как длина и есть само число */
-            if (number%i == 0 || number<=0){
+            if (number % i == 0 || number <= 0){
                 /* проверяем есть ли остаток после деления либо на
                 отрицательность числа и 0, так как 0 не простое число*/
                 isSimple = false;
@@ -72,7 +72,7 @@ public class Main {
             return num;
         }
 
-        return reduceToSingleDigit((num%10) + reduceToSingleDigit(num/10));
+        return reduceToSingleDigit((num % 10) + reduceToSingleDigit(num/10));
     }
 
     /* Вывеcти перевернутую лесенку высотой n */
