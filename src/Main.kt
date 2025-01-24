@@ -26,16 +26,13 @@ fun searchMaxMinValue() {
 
     for (i in 0 until length) {
         print("${array[i]} ")
-        when {
-            array[i] > maxValue -> {
+       if ( array[i] > maxValue) {
                 maxValue = array[i]
                 maxIndex = i;
-            }
-
-            array[i] < minValue -> {
+       }
+        else if (array[i] < minValue) {
                 minValue = array[i]
                 minIndex = i;
-            }
         }
     }
 
@@ -69,14 +66,19 @@ fun countEvenOddNumbers() {
     println()
 
     for (value in array) {
-        when {
-            value % 2 == 0 -> evenNumbers++
-            else -> oddNumbers++
+        if (value % 2 == 0) {
+            evenNumbers++
+        }
+        else {
+            oddNumbers++
         }
     }
-    when {
-        evenNumbers == 0 && oddNumbers == 0 -> return
-        else -> println("Количество четных чисел: $evenNumbers \nКоличество нечетных чисел: $oddNumbers")
+
+    if (evenNumbers == 0 && oddNumbers == 0) {
+        return
+    }
+    else {
+            println("Количество четных чисел: $evenNumbers \nКоличество нечетных чисел: $oddNumbers")
     }
 }
 
@@ -85,8 +87,8 @@ fun countEvenOddNumbers() {
 
 fun reverseArray() {
     var array = emptyArray<Int>()
-    var firstHalfValue: Int
-    var secondHalfValue: Int
+    var firstHalfValue = 0
+    var secondHalfValue = 0
 
     println("Введите длину массива: ")
     var length = readln().toInt()
@@ -143,9 +145,7 @@ fun isPalindrome() {
         length--
     }
 
-    when {
-        isPalindrome -> println("Массив является палиндромом")
-        else -> println("Массив не является палиндромом")
-    }
+    println( if (isPalindrome) "Массив является палиндромом"
+    else "Массив не является палиндромом")
 
 }
