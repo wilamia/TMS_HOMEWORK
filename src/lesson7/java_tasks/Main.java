@@ -1,4 +1,4 @@
-package lesson7;
+package lesson7.java_tasks;
 
 import java.util.Scanner;
 

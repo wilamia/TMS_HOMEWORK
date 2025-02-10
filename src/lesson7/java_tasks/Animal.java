@@ -1,4 +1,4 @@
-package lesson7;
+package lesson7.java_tasks;
 
 public class Animal {
 /* protected - второй после private, имеет доступ класс наследник,

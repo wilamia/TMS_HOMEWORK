@@ -1,4 +1,4 @@
-package lesson7
+package lesson7.kotlin_tasks
 
 enum class ParcelStatus(val value: Int) {
     SKIPPED(100),

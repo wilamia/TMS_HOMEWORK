@@ -1,4 +1,4 @@
-package lesson7;
+package lesson7.java_tasks;
 
 public enum DayOfWeek {
     MONDAY("понедельник"),

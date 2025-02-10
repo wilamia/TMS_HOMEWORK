@@ -1,4 +1,4 @@
-package lesson7
+package lesson7.kotlin_tasks
 
 class BankAccount(
     private var account: String, // первичный конструктор

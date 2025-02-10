@@ -1,4 +1,4 @@
-package lesson7
+package lesson7.kotlin_tasks
 
 fun main() {
     val account = BankAccount("12Ks", 1000.0)
